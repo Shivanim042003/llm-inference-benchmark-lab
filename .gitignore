@@ -1,0 +1,9 @@
+.venv/
+.venv-xpu/
+__pycache__/
+*.py[cod]
+.env
+results/raw/*
+!results/raw/.gitkeep
+results/processed/*
+!results/processed/.gitkeep
