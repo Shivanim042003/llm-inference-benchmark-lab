@@ -1,0 +1,3 @@
+model,mode,concurrency,max_tokens,total_requests,successful_requests,failed_requests,mean_latency_s,p50_latency_s,p95_latency_s,request_throughput_rps,generated_tokens,token_throughput_tps
+Qwen/Qwen2.5-0.5B-Instruct,non-streaming,1,32,5,5,0,14.584611877200041,9.883562593000079,25.378713659999992,0.06856499357078552,160,2.1940797942651367
+Qwen/Qwen2.5-0.5B-Instruct,non-streaming,2,32,5,5,0,13.338571264599977,14.674278527999832,14.818842350400065,0.13485915636877166,160,4.315493003800693

@@ -51,3 +51,25 @@ python -m src.benchmark.client \
 ```
 
 **Important:** mock-server results validate the benchmark software only. They are not real LLM performance measurements. Streaming ITL here measures intervals between received content chunks, not necessarily individual tokens. Real-model measurements must document the model, hardware, runtime, and configuration.
+
+## Real-model CPU inference
+
+The project includes a FastAPI server for running a real Hugging Face language model on CPU.
+
+**Model:** `Qwen/Qwen2.5-0.5B-Instruct`
+
+### Install inference dependencies
+
+```bash
+pip install transformers fastapi uvicorn
+```
+
+### Start the inference server
+
+```bash
+uvicorn scripts.cpu_model_server:app --host 127.0.0.1 --port 8000
+```
+
+The server exposes `GET /health` and `POST /v1/chat/completions`.
+
+**Note:** Benchmark results depend on the runtime, input length, and concurrency. Treat the current CPU measurements as preliminary.
