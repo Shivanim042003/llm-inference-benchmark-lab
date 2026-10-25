@@ -92,6 +92,20 @@ This project evaluates local LLM inference performance across generation limits,
 
 <!-- WORKLOAD-SCALING-RESULTS -->
 
+<!-- RESULTS-TABLE-START -->
+### Headline results (CPU, Qwen2.5-0.5B-Instruct)
+
+| Max tokens | Concurrency | Req/s | Tokens/s | Mean latency (s) | P95 latency (s) |
+|---|---|---|---|---|---|
+| 16.0 | 1.0 | 0.197 | 3.156 | 5.382 | 7.856 |
+| 16.0 | 2.0 | 0.252 | 4.028 | 7.071 | 8.298 |
+| 32.0 | 1.0 | 0.12 | 3.828 | 8.361 | 9.339 |
+| 32.0 | 2.0 | 0.141 | 4.515 | 12.673 | 14.005 |
+| 64.0 | 1.0 | 0.061 | 3.922 | 16.329 | 17.867 |
+| 64.0 | 2.0 | 0.071 | 4.515 | 25.42 | 28.832 |
+
+<!-- RESULTS-TABLE-END -->
+
 ## Reproducibility and Validation
 
 The following artifacts document checks performed on saved benchmark results. These checks do not rerun model inference.
@@ -112,3 +126,7 @@ The following artifacts document checks performed on saved benchmark results. Th
 - **Shared hardware:** Colab CPUs are shared and variable, so absolute numbers will differ on other machines.
 - **Not directly comparable:** results are not directly comparable across different hardware, runtimes, prompt lengths, or generation limits.
 - **Saved results only:** the reports are generated from saved raw data and do not rerun model inference.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
