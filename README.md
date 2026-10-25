@@ -106,6 +106,19 @@ This project evaluates local LLM inference performance across generation limits,
 
 <!-- RESULTS-TABLE-END -->
 
+<!-- KEY-FINDINGS-START -->
+### Key findings
+
+- Peak token throughput: **4.5 tok/s** at 32 max tokens, concurrency 2.
+- Lowest mean latency: **5.38 s** at 16 max tokens, concurrency 1.
+- Highest P95 latency: **28.83 s** at 64 max tokens, concurrency 2.
+- At 16 max tokens, going from concurrency 1 to 2 changed mean latency by **1.31x** and token throughput by **1.28x**.
+- At 32 max tokens, going from concurrency 1 to 2 changed mean latency by **1.52x** and token throughput by **1.18x**.
+- At 64 max tokens, going from concurrency 1 to 2 changed mean latency by **1.56x** and token throughput by **1.15x**.
+
+*Measured on CPU with a single model; see Limitations.*
+<!-- KEY-FINDINGS-END -->
+
 ## Reproducibility and Validation
 
 The following artifacts document checks performed on saved benchmark results. These checks do not rerun model inference.
