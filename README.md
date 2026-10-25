@@ -73,3 +73,22 @@ uvicorn scripts.cpu_model_server:app --host 127.0.0.1 --port 8000
 The server exposes `GET /health` and `POST /v1/chat/completions`.
 
 **Note:** Benchmark results depend on the runtime, input length, and concurrency. Treat the current CPU measurements as preliminary.
+
+## Benchmark Results
+
+This project evaluates local LLM inference performance across generation limits, concurrency levels, and streaming modes. Experiments use saved results; metrics are specific to the documented model and runtime environment.
+
+- [Workload scaling report](reports/WORKLOAD_SCALING.md)
+- [Cross-configuration analysis](reports/WORKLOAD_SCALING_ANALYSIS.md)
+- [Summary CSV](reports/workload-scaling-summary.csv)
+- [Latency chart](reports/workload-scaling-latency.png)
+- [Request throughput chart](reports/workload-scaling-throughput.png)
+- [Token throughput chart](reports/workload-scaling-token-throughput.png)
+- [Validation results](reports/workload-scaling-validation.csv)
+- [Metric consistency check](reports/workload-scaling-metric-check.csv)
+- [Streaming comparison report](reports/STREAMING_COMPARISON.md)
+- [Streaming comparison CSV](reports/streaming-comparison-summary.csv)
+- [Streaming latency chart](reports/streaming-comparison-latency.png)
+
+<!-- WORKLOAD-SCALING-RESULTS -->
+
