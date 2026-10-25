@@ -97,19 +97,19 @@ This project evaluates local LLM inference performance across generation limits,
 
 | Max tokens | Concurrency | Req/s | Tokens/s | Mean latency (s) | P95 latency (s) |
 |---|---|---|---|---|---|
-| 16.0 | 1.0 | 0.197 | 3.156 | 5.382 | 7.856 |
-| 16.0 | 2.0 | 0.252 | 4.028 | 7.071 | 8.298 |
-| 32.0 | 1.0 | 0.12 | 3.828 | 8.361 | 9.339 |
-| 32.0 | 2.0 | 0.141 | 4.515 | 12.673 | 14.005 |
-| 64.0 | 1.0 | 0.061 | 3.922 | 16.329 | 17.867 |
-| 64.0 | 2.0 | 0.071 | 4.515 | 25.42 | 28.832 |
+| 16 | 1 | 0.197 | 3.156 | 5.382 | 7.856 |
+| 16 | 2 | 0.252 | 4.028 | 7.071 | 8.298 |
+| 32 | 1 | 0.12 | 3.828 | 8.361 | 9.339 |
+| 32 | 2 | 0.141 | 4.515 | 12.673 | 14.005 |
+| 64 | 1 | 0.061 | 3.922 | 16.329 | 17.867 |
+| 64 | 2 | 0.071 | 4.515 | 25.42 | 28.832 |
 
 <!-- RESULTS-TABLE-END -->
 
 <!-- KEY-FINDINGS-START -->
 ### Key findings
 
-- Peak token throughput: **4.5 tok/s** at 32 max tokens, concurrency 2.
+- Peak token throughput: **4.5 tok/s** at concurrency 2 (32 and 64 max tokens, within 0.5% of each other).
 - Lowest mean latency: **5.38 s** at 16 max tokens, concurrency 1.
 - Highest P95 latency: **28.83 s** at 64 max tokens, concurrency 2.
 - At 16 max tokens, going from concurrency 1 to 2 changed mean latency by **1.31x** and token throughput by **1.28x**.
