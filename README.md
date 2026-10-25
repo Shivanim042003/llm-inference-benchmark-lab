@@ -92,3 +92,14 @@ This project evaluates local LLM inference performance across generation limits,
 
 <!-- WORKLOAD-SCALING-RESULTS -->
 
+## Reproducibility and Validation
+
+The following artifacts document checks performed on saved benchmark results. These checks do not rerun model inference.
+
+- [Reproducibility check](reports/REPRODUCIBILITY_CHECK.md)
+- [Reproducibility results CSV](reports/reproducibility-check.csv)
+- [Workload scaling report](reports/WORKLOAD_SCALING.md)
+- [Workload scaling summary](reports/workload-scaling-summary.csv)
+
+<!-- REPRODUCIBILITY-REPORTS -->
+
