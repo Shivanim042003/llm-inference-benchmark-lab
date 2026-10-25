@@ -103,3 +103,12 @@ The following artifacts document checks performed on saved benchmark results. Th
 
 <!-- REPRODUCIBILITY-REPORTS -->
 
+<!-- LIMITATIONS -->
+## Limitations and Environment
+
+- **CPU-only:** all results were measured on a CPU-only runtime (Linux x86_64, Google Colab). No GPU or XPU results are included.
+- **Single model:** results cover Qwen2.5-0.5B-Instruct only and do not generalize to larger models.
+- **Small scale:** a limited number of trials per configuration, so treat differences between nearby configurations as indicative, not statistically conclusive.
+- **Shared hardware:** Colab CPUs are shared and variable, so absolute numbers will differ on other machines.
+- **Not directly comparable:** results are not directly comparable across different hardware, runtimes, prompt lengths, or generation limits.
+- **Saved results only:** the reports are generated from saved raw data and do not rerun model inference.
